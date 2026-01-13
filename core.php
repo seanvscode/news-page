@@ -36,7 +36,6 @@ if (isset($_GET['edit'])) {
     $eemail = $row['email'];
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
