@@ -1,5 +1,88 @@
-testing!
+<?php
+$conn = mysqli_connect("localhost", "root", "", "crud_db");
+if (!$conn) {
+    die("Connection failed");
+}
 
+$edit = false;
+$eid = "";
+$ename = "";
+$eemail = "";
 
+if (isset($_POST['save'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    mysqli_query($conn, "INSERT INTO students (name, email) VALUES ('$name', '$email')");
+}
 
+if (isset($_POST['update'])) {
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    mysqli_query($conn, "UPDATE students SET name='$name', email='$email' WHERE id=$id");
+}
 
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    mysqli_query($conn, "DELETE FROM students WHERE id=$id");
+}
+
+if (isset($_GET['edit'])) {
+    $edit = true;
+    $eid = $_GET['edit'];
+    $result = mysqli_query($conn, "SELECT * FROM students WHERE id=$eid");
+    $row = mysqli_fetch_assoc($result);
+    $ename = $row['name'];
+    $eemail = $row['email'];
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD</title>
+</head>
+<body>
+
+<h2><?php echo $edit ? "Edit Student" : "Add Student"; ?></h2>
+
+<form method="POST">
+    <input type="hidden" name="id" value="<?php echo $eid; ?>">
+    <input type="text" name="name" placeholder="Name" value="<?php echo $ename; ?>" required>
+    <input type="email" name="email" placeholder="Email" value="<?php echo $eemail; ?>" required>
+
+    <?php if ($edit) { ?>
+        <button type="submit" name="update">Update</button>
+    <?php } else { ?>
+        <button type="submit" name="save">Save</button>
+    <?php } ?>
+</form>
+
+<h2>Student List</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+
+    <?php
+    $result = mysqli_query($conn, "SELECT * FROM students");
+    while ($row = mysqli_fetch_assoc($result)) {
+    ?>
+        <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['name']; ?></td>
+            <td><?php echo $row['email']; ?></td>
+            <td>
+                <a href="?edit=<?php echo $row['id']; ?>">Edit</a> |
+                <a href="?delete=<?php echo $row['id']; ?>">Delete</a>
+            </td>
+        </tr>
+    <?php } ?>
+</table>
+
+</body>
+</html>
