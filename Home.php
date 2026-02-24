@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunstar Home</title>
+=======
     <title>Global News Network | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -469,8 +471,13 @@
             }
         }
     </style>
+>>>>>>> 97d6a13f17b4f00df4809f2e6f3af6a8be609a8f
 </head>
 <body>
+<<<<<<< HEAD
+    <h1>Donald Trump dies at 100.</h1>
+    
+=======
     <!-- Header with Navigation -->
     <header>
         <div class="container header-content">
@@ -503,6 +510,7 @@
             </div>
         </div>
     </header>
+>>>>>>> 97d6a13f17b4f00df4809f2e6f3af6a8be609a8f
 
     <!-- Hero Section with Main News -->
     <section class="hero">
