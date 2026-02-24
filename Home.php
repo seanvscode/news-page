@@ -3,13 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>EAGLE NEWS | Home</title>
-=======
-    <title>BETHEL NEWSPAGE</title>
-=======
-    <title>BETHEL NEWSPAGE | HOME</title>
->>>>>>> c0e42cb5d9b0298e3e0f7b99c8ce9df58d2acaca
+    <title>Global News Network | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -20,9 +14,9 @@
         }
         
         :root {
-            --primary-color: #1a7e76;
-            --secondary-color: #289361;
-            --accent-color: #ffb922;
+            --primary-color: #1a237e;
+            --secondary-color: #283593;
+            --accent-color: #ff5722;
             --light-color: #f5f5f5;
             --dark-color: #212121;
             --gray-color: #757575;
@@ -475,13 +469,8 @@
             }
         }
     </style>
->>>>>>> 97d6a13f17b4f00df4809f2e6f3af6a8be609a8f
 </head>
 <body>
-<<<<<<< HEAD
-    <h1>Donald Trump dies at 100.</h1>
-    
-=======
     <!-- Header with Navigation -->
     <header>
         <div class="container header-content">
@@ -514,7 +503,6 @@
             </div>
         </div>
     </header>
->>>>>>> 97d6a13f17b4f00df4809f2e6f3af6a8be609a8f
 
     <!-- Hero Section with Main News -->
     <section class="hero">
@@ -694,9 +682,9 @@
                     <h3>Global News</h3>
                     <p>Your trusted source for the latest news from around the world. Delivering accurate, timely, and comprehensive coverage.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/DAHBOO7"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
@@ -775,3 +763,4 @@
     </script>
 </body>
 </html>
+
