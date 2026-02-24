@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunstar Home</title>
+<<<<<<< HEAD
+    <title>EAGLE NEWS | Home</title>
 =======
-    <title>Global News Network | Home</title>
+    <title>BETHEL NEWSPAGE</title>
+=======
+    <title>BETHEL NEWSPAGE | HOME</title>
+>>>>>>> c0e42cb5d9b0298e3e0f7b99c8ce9df58d2acaca
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -16,9 +20,9 @@
         }
         
         :root {
-            --primary-color: #1a237e;
-            --secondary-color: #283593;
-            --accent-color: #ff5722;
+            --primary-color: #1a7e76;
+            --secondary-color: #289361;
+            --accent-color: #ffb922;
             --light-color: #f5f5f5;
             --dark-color: #212121;
             --gray-color: #757575;
