@@ -717,7 +717,7 @@
     </script>
 
     <div style="display: none;" id="article-pages">
-        <div id="article-climate-summit">
+        <div id="https://climatechangeconferences.org/">
             <div class="page-indicator">CLIMATE SUMMIT</div>
             <div class="container article-content">
                 <h1>Global Summit Addresses Climate Change: World Leaders Commit to New Emission Targets</h1>
@@ -734,7 +734,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-ai-healthcare">
+        <div id="https://www.usa.edu/blog/how-ai-is-revolutionizing-healthcare/">
             <div class="page-indicator">AI HEALTHCARE</div>
             <div class="container article-content">
                 <h1>New AI Technology Revolutionizes Healthcare Diagnostics</h1>
@@ -748,7 +748,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-world-cup">
+        <div id="https://blog.dana-farber.org/insight/2026/01/ten-cancer-related-breakthroughs-giving-us-hope-in-2026/">
             <div class="page-indicator">WORLD CUP</div>
             <div class="container article-content">
                 <h1>National Team Advances to World Cup Finals After Thrilling Match</h1>
@@ -762,7 +762,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-amazon-species">
+        <div id="https://www.wwf.org.uk/updates/new-amazon-species-are-discovered-every-other-day">
             <div class="page-indicator">AMAZON DISCOVERY</div>
             <div class="container article-content">
                 <h1>Scientists Discover New Species in Amazon Rainforest</h1>
@@ -776,7 +776,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-stock-market">
+        <div id="https://www.capitalgroup.com/advisor/insights/articles/guide-market-recoveries.html">
             <div class="page-indicator">STOCK MARKET</div>
             <div class="container article-content">
                 <h1>Stock Markets Reach All-Time High Amid Economic Recovery</h1>
@@ -790,7 +790,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-next-gen-phone">
+        <div id="https://news.samsung.com/global/samsung-unveils-galaxy-s26-series-the-most-intuitive-galaxy-ai-phone-yet">
             <div class="page-indicator">NEXT-GEN PHONE</div>
             <div class="container article-content">
                 <h1>Tech Giant Unveils Next-Generation Smartphone with Revolutionary Features</h1>
@@ -804,7 +804,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-cancer-research">
+        <div id="https://blog.dana-farber.org/insight/2026/01/ten-cancer-related-breakthroughs-giving-us-hope-in-2026/">
             <div class="page-indicator">CANCER RESEARCH</div>
             <div class="container article-content">
                 <h1>Breakthrough in Cancer Research Offers Hope for New Treatment</h1>
@@ -818,7 +818,7 @@
                 </div>
             </div>
         </div>
-        <div id="article-film-director">
+        <div id="https://www.abs-cbn.com/entertainment/showbiz/movies-series/2026/1/14/new-netflix-project-of-squid-game-director-hwang-dong-hyuk-announced-1942">
             <div class="page-indicator">FILM DIRECTOR</div>
             <div class="container article-content">
                 <h1>Award-Winning Film Director Announces New Project</h1>
