@@ -14,8 +14,8 @@
         }
         
         :root {
-            --primary-color: #1a7e7e;
-            --secondary-color: #288f93;
+            --primary-color: #285f93;
+            --secondary-color: #285f93;
             --accent-color: #ffde22;
             --light-color: #f5f5f5;
             --dark-color: #212121;
@@ -483,8 +483,10 @@
     <header>
         <div class="container header-content">
             <a href="index.html" class="logo">
+                
+            </a>
                 <i class="fas fa-newspaper"></i>
-                <h1>Global<span>News</span></h1>
+                <h1>Eagle<span>News</span></h1>
             </a>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -513,7 +515,7 @@
 
     <section class="hero">
         <div class="container hero-container">
-            <a href="https://climatechangeconferences.org/" class="main-news">
+            <a href="article-climate-summit.html" class="main-news">
                 <img src="https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Climate Summit">
                 <div class="main-news-content">
                     <span class="news-tag">BREAKING NEWS</span>
@@ -525,21 +527,21 @@
                 </div>
             </a>
             <div class="side-news">
-                <a href="https://www.usa.edu/blog/how-ai-is-revolutionizing-healthcare/" class="side-news-item">
+                <a href="article-ai-healthcare.html" class="side-news-item">
                     <img src="https://images.unsplash.com/photo-1551135049-8a33b2fb2f4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="AI Healthcare" class="side-news-img">
                     <div class="side-news-content">
                         <h3>New AI Technology Revolutionizes Healthcare Diagnostics</h3>
                         <div class="news-meta"><span>45 min ago</span></div>
                     </div>
                 </a>
-                <a href="https://www.skysports.com/football/news/11095/13427475/world-cup-2026-who-has-qualified-full-list-of-teams-for-usa-canada-and-mexico-tournament" class="side-news-item">
+                <a href="article-world-cup.html" class="side-news-item">
                     <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="World Cup" class="side-news-img">
                     <div class="side-news-content">
                         <h3>National Team Advances to World Cup Finals After Thrilling Match</h3>
                         <div class="news-meta"><span>1 hour ago</span></div>
                     </div>
                 </a>
-                <a href="https://www.wwf.org.uk/updates/new-amazon-species-are-discovered-every-other-day" class="side-news-item">
+                <a href="article-amazon-species.html" class="side-news-item">
                     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="Amazon Species" class="side-news-img">
                     <div class="side-news-content">
                         <h3>Scientists Discover New Species in Amazon Rainforest</h3>
@@ -556,7 +558,7 @@
             <a href="category-latest.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="news-grid">
-            <a href="https://www.capitalgroup.com/advisor/insights/articles/guide-market-recoveries.html" class="news-card">
+            <a href="article-stock-market.html" class="news-card">
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Stock Market">
                 <div class="news-card-content">
                     <h3>Stock Markets Reach All-Time High Amid Economic Recovery</h3>
@@ -564,7 +566,7 @@
                     <div class="news-meta"><span>Business</span><span>4 hours ago</span></div>
                 </div>
             </a>
-            <a href="https://news.samsung.com/global/samsung-unveils-galaxy-s26-series-the-most-intuitive-galaxy-ai-phone-yet" class="news-card">
+            <a href="article-next-gen-phone.html" class="news-card">
                 <img src="https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Smartphone">
                 <div class="news-card-content">
                     <h3>Tech Giant Unveils Next-Generation Smartphone with Revolutionary Features</h3>
@@ -572,7 +574,7 @@
                     <div class="news-meta"><span>Technology</span><span>6 hours ago</span></div>
                 </div>
             </a>
-            <a href="https://blog.dana-farber.org/insight/2026/01/ten-cancer-related-breakthroughs-giving-us-hope-in-2026/" class="news-card">
+            <a href="article-cancer-research.html" class="news-card">
                 <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Cancer Research">
                 <div class="news-card-content">
                     <h3>Breakthrough in Cancer Research Offers Hope for New Treatment</h3>
@@ -586,22 +588,22 @@
             <h2>News Categories</h2>
         </div>
         <div class="categories">
-            <a href="https://www.bbc.com/news/world" class="category-card">
+            <a href="category-world.html" class="category-card">
                 <i class="fas fa-globe-americas"></i>
                 <h3>World</h3>
                 <p>International news and events</p>
             </a>
-            <a href="https://newsinfo.inquirer.net/" class="category-card">
+            <a href="category-politics.html" class="category-card">
                 <i class="fas fa-landmark"></i>
                 <h3>Politics</h3>
                 <p>Government and political news</p>
             </a>
-            <a href="https://business.inquirer.net/" class="category-card">
+            <a href="category-business.html" class="category-card">
                 <i class="fas fa-chart-line"></i>
                 <h3>Business</h3>
                 <p>Financial and economic updates</p>
             </a>
-            <a href="https://www.theverge.com/tech" class="category-card">
+            <a href="category-tech.html" class="category-card">
                 <i class="fas fa-laptop-code"></i>
                 <h3>Technology</h3>
                 <p>Tech innovations and trends</p>
@@ -613,7 +615,7 @@
             <a href="category-top-stories.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="news-grid">
-            <a href="https://www.abs-cbn.com/entertainment/showbiz/movies-series/2026/1/14/new-netflix-project-of-squid-game-director-hwang-dong-hyuk-announced-1942" class="news-card">
+            <a href="article-film-director.html" class="news-card">
                 <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Film Director">
                 <div class="news-card-content">
                     <h3>Award-Winning Film Director Announces New Project</h3>
@@ -621,7 +623,7 @@
                     <div class="news-meta"><span>Entertainment</span><span>1 day ago</span></div>
                 </div>
             </a>
-            <a href="https://tracextech.com/sustainable-agriculture-practices/" class="news-card">
+            <a href="article-farming-tech.html" class="news-card">
                 <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80" alt="Farming">
                 <div class="news-card-content">
                     <h3>Innovative Farming Techniques Boost Crop Yields by 40%</h3>
@@ -629,7 +631,7 @@
                     <div class="news-meta"><span>Science</span><span>1 day ago</span></div>
                 </div>
             </a>
-            <a href="https://www.bbc.com/news/articles/cd679n9lnx5o" class="news-card">
+            <a href="article-gaming-console.html" class="news-card">
                 <img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1227&q=80" alt="Gaming">
                 <div class="news-card-content">
                     <h3>Major Gaming Conference Announces Next Generation Console</h3>
@@ -647,10 +649,10 @@
                     <h3>Global News</h3>
                     <p>Your trusted source for the latest news from around the world.</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/DAHBOO7"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@CNN"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -717,7 +719,7 @@
     </script>
 
     <div style="display: none;" id="article-pages">
-        <div id="https://climatechangeconferences.org/">
+        <div id="article-climate-summit">
             <div class="page-indicator">CLIMATE SUMMIT</div>
             <div class="container article-content">
                 <h1>Global Summit Addresses Climate Change: World Leaders Commit to New Emission Targets</h1>
@@ -734,7 +736,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://www.usa.edu/blog/how-ai-is-revolutionizing-healthcare/">
+        <div id="article-ai-healthcare">
             <div class="page-indicator">AI HEALTHCARE</div>
             <div class="container article-content">
                 <h1>New AI Technology Revolutionizes Healthcare Diagnostics</h1>
@@ -748,7 +750,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://blog.dana-farber.org/insight/2026/01/ten-cancer-related-breakthroughs-giving-us-hope-in-2026/">
+        <div id="article-world-cup">
             <div class="page-indicator">WORLD CUP</div>
             <div class="container article-content">
                 <h1>National Team Advances to World Cup Finals After Thrilling Match</h1>
@@ -762,7 +764,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://www.wwf.org.uk/updates/new-amazon-species-are-discovered-every-other-day">
+        <div id="article-amazon-species">
             <div class="page-indicator">AMAZON DISCOVERY</div>
             <div class="container article-content">
                 <h1>Scientists Discover New Species in Amazon Rainforest</h1>
@@ -776,7 +778,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://www.capitalgroup.com/advisor/insights/articles/guide-market-recoveries.html">
+        <div id="article-stock-market">
             <div class="page-indicator">STOCK MARKET</div>
             <div class="container article-content">
                 <h1>Stock Markets Reach All-Time High Amid Economic Recovery</h1>
@@ -790,7 +792,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://news.samsung.com/global/samsung-unveils-galaxy-s26-series-the-most-intuitive-galaxy-ai-phone-yet">
+        <div id="article-next-gen-phone">
             <div class="page-indicator">NEXT-GEN PHONE</div>
             <div class="container article-content">
                 <h1>Tech Giant Unveils Next-Generation Smartphone with Revolutionary Features</h1>
@@ -804,7 +806,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://blog.dana-farber.org/insight/2026/01/ten-cancer-related-breakthroughs-giving-us-hope-in-2026/">
+        <div id="article-cancer-research">
             <div class="page-indicator">CANCER RESEARCH</div>
             <div class="container article-content">
                 <h1>Breakthrough in Cancer Research Offers Hope for New Treatment</h1>
@@ -818,7 +820,7 @@
                 </div>
             </div>
         </div>
-        <div id="https://www.abs-cbn.com/entertainment/showbiz/movies-series/2026/1/14/new-netflix-project-of-squid-game-director-hwang-dong-hyuk-announced-1942">
+        <div id="article-film-director">
             <div class="page-indicator">FILM DIRECTOR</div>
             <div class="container article-content">
                 <h1>Award-Winning Film Director Announces New Project</h1>
