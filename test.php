@@ -494,12 +494,12 @@
             <nav>
                 <ul id="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="category-world.html">World</a></li>
-                    <li><a href="category-politics.html">Politics</a></li>
-                    <li><a href="category-business.html">Business</a></li>
-                    <li><a href="category-tech.html">Technology</a></li>
-                    <li><a href="category-health.html">Health</a></li>
-                    <li><a href="category-entertainment.html">Entertainment</a></li>
+                    <li><a href="https://edition.cnn.com/world">World</a></li>
+                    <li><a href="https://newsinfo.inquirer.net/">Politics</a></li>
+                    <li><a href="https://business.inquirer.net/">Business</a></li>
+                    <li><a href="https://www.reuters.com/technology/">Technology</a></li>
+                    <li><a href="https://edition.cnn.com/health">Health</a></li>
+                    <li><a href="https://www.abs-cbn.com/entertainment">Entertainment</a></li>
                 </ul>
             </nav>
             <div class="header-right">
