@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2026 at 01:52 AM
+-- Generation Time: Mar 24, 2026 at 02:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,7 +45,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `summary`, `content`, `category`, `author`, `event_date`, `image_url`, `created_at`, `updated_at`) VALUES
-(6, 'im outclass and its outrageous', 'oh i cant move on babtytall', 'flippin through flipping throgh stations', 'Announcements', 'outclassed its outrageous', '2026-03-24', '', '2026-03-24 00:48:25', '2026-03-24 00:48:25');
+(6, 'im outclass and its outrageous', 'oh i cant move on babtytall', 'flippin through flipping throgh stations', 'Announcements', 'outclassed its outrageous', '2026-03-24', '', '2026-03-24 00:48:25', '2026-03-24 00:48:25'),
+(7, 'sir chord is behind me', 'he is looking at my screen', 'so scared', 'Events', 'chino', '2026-03-23', '', '2026-03-24 01:14:18', '2026-03-24 01:14:18');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +66,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
