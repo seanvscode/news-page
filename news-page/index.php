@@ -1,6 +1,8 @@
 <?php
 // index.php - Complete working version with admin authentication
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Include database, news model, and auth
 require_once 'config/database.php';
@@ -129,7 +131,7 @@ if(isset($_GET['msg'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eagle School News</title>
+    <title>Eagle News</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -193,34 +195,18 @@ if(isset($_GET['msg'])) {
             align-items: center;
         }
         
-        .logo i {
-            color: var(--accent-color);
-            margin-right: 10px;
+        .logo img {
+            height: 45px;
+            width: auto;
+            margin-right: 12px;
+            border-radius: 4px;
         }
         
         .logo span {
             color: var(--accent-color);
         }
         
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 25px;
-        }
-        
-        nav ul li a {
-            font-weight: 600;
-            transition: color 0.3s;
-            font-size: 1rem;
-        }
-        
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--accent-color);
-        }
+        /* Navigation menu removed - no styles needed */
         
         .header-right {
             display: flex;
@@ -255,14 +241,7 @@ if(isset($_GET['msg'])) {
             cursor: pointer;
         }
         
-        .page-indicator {
-            background-color: var(--accent-color);
-            color: var(--dark-color);
-            padding: 8px 0;
-            text-align: center;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
+        /* Removed .page-indicator styles */
         
         .message {
             padding: 15px;
@@ -640,25 +619,7 @@ if(isset($_GET['msg'])) {
         
         @media (max-width: 768px) {
             .mobile-menu { display: block; }
-            nav ul {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: all 0.3s;
-                z-index: 999;
-            }
-            nav ul.show {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            nav ul li { margin: 15px 0; }
+            /* No nav ul styles needed since nav is removed */
             .search-box input { width: 140px; }
             .categories { flex-direction: column; }
             .header-right {
@@ -680,22 +641,13 @@ if(isset($_GET['msg'])) {
     <header>
         <div class="container header-content">
             <a href="index.php" class="logo">
-                <i class="fas fa-school"></i>
-                <h1>Eagle<span> School News</span></h1>
+                <img src="images/bethel-logo.png" alt="Bethel International School Logo">
+                <h1>Eagle<span> News</span></h1>
             </a>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
-            <nav>
-                <ul id="nav-menu">
-                    <li><a href="index.php" <?php echo !isset($_GET['category']) && !isset($_GET['search']) ? 'class="active"' : ''; ?>>Home</a></li>
-                    <li><a href="?category=Events" <?php echo (isset($_GET['category']) && $_GET['category'] == 'Events') ? 'class="active"' : ''; ?>>Events</a></li>
-                    <li><a href="?category=Announcements" <?php echo (isset($_GET['category']) && $_GET['category'] == 'Announcements') ? 'class="active"' : ''; ?>>Announcements</a></li>
-                    <li><a href="?category=Sports" <?php echo (isset($_GET['category']) && $_GET['category'] == 'Sports') ? 'class="active"' : ''; ?>>Sports</a></li>
-                    <li><a href="?category=Clubs" <?php echo (isset($_GET['category']) && $_GET['category'] == 'Clubs') ? 'class="active"' : ''; ?>>Clubs</a></li>
-                    <li><a href="?category=Student Life" <?php echo (isset($_GET['category']) && $_GET['category'] == 'Student Life') ? 'class="active"' : ''; ?>>Student Life</a></li>
-                </ul>
-            </nav>
+            <!-- Navigation menu removed -->
             <div class="header-right">
                 <form method="GET" action="index.php" class="search-box">
                     <input type="text" name="search" placeholder="Search news..." value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
@@ -726,21 +678,7 @@ if(isset($_GET['msg'])) {
         </div>
     </div>
 
-    <div class="page-indicator">
-        <?php 
-        if(isset($_GET['category'])) {
-            echo strtoupper($_GET['category']) . " NEWS";
-        } elseif(isset($_GET['search'])) {
-            echo 'SEARCH RESULTS: "' . htmlspecialchars($_GET['search']) . '"';
-        } elseif(isset($_GET['edit']) && $isAdmin) {
-            echo 'EDIT NEWS';
-        } elseif(isset($_GET['add']) && $isAdmin) {
-            echo 'ADD NEWS';
-        } else {
-            echo 'HOME';
-        }
-        ?>
-    </div>
+    <!-- Page indicator removed -->
 
     <?php if($message): ?>
     <div class="container">
@@ -821,13 +759,13 @@ if(isset($_GET['msg'])) {
     <main>
         <section class="hero">
             <div class="container">
-                <h2>Welcome to Eagle School News</h2>
+                <h2>Welcome to Eagle News</h2>
                 <p>Stay updated with the latest happenings at our school</p>
             </div>
         </section>
 
         <div class="container">
-            <!-- Categories -->
+            <!-- Categories (Toggle Filters) -->
             <div class="section-title">
                 <h2>Explore by Category</h2>
                 <?php if(isset($_GET['category']) || isset($_GET['search'])): ?>
@@ -836,22 +774,29 @@ if(isset($_GET['msg'])) {
             </div>
             
             <div class="categories">
-                <a href="?category=Events" class="category-card <?php echo (isset($_GET['category']) && $_GET['category'] == 'Events') ? 'active' : ''; ?>">
+                <?php
+                $currentCat = isset($_GET['category']) ? $_GET['category'] : '';
+                ?>
+                <a href="<?php echo ($currentCat == 'Events') ? 'index.php' : '?category=Events'; ?>" 
+                   class="category-card <?php echo ($currentCat == 'Events') ? 'active' : ''; ?>">
                     <i class="fas fa-calendar-alt"></i>
                     <h3>Events</h3>
                     <p>Upcoming school events</p>
                 </a>
-                <a href="?category=Announcements" class="category-card <?php echo (isset($_GET['category']) && $_GET['category'] == 'Announcements') ? 'active' : ''; ?>">
+                <a href="<?php echo ($currentCat == 'Announcements') ? 'index.php' : '?category=Announcements'; ?>" 
+                   class="category-card <?php echo ($currentCat == 'Announcements') ? 'active' : ''; ?>">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Announcements</h3>
                     <p>Important notices</p>
                 </a>
-                <a href="?category=Sports" class="category-card <?php echo (isset($_GET['category']) && $_GET['category'] == 'Sports') ? 'active' : ''; ?>">
+                <a href="<?php echo ($currentCat == 'Sports') ? 'index.php' : '?category=Sports'; ?>" 
+                   class="category-card <?php echo ($currentCat == 'Sports') ? 'active' : ''; ?>">
                     <i class="fas fa-football-ball"></i>
                     <h3>Sports</h3>
                     <p>Games, tryouts, results</p>
                 </a>
-                <a href="?category=Clubs" class="category-card <?php echo (isset($_GET['category']) && $_GET['category'] == 'Clubs') ? 'active' : ''; ?>">
+                <a href="<?php echo ($currentCat == 'Clubs') ? 'index.php' : '?category=Clubs'; ?>" 
+                   class="category-card <?php echo ($currentCat == 'Clubs') ? 'active' : ''; ?>">
                     <i class="fas fa-users"></i>
                     <h3>Clubs</h3>
                     <p>Club activities and meetings</p>
@@ -919,8 +864,8 @@ if(isset($_GET['msg'])) {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Eagle School News</h3>
-                    <p>Your source for everything happening at Eagle High.</p>
+                    <h3>Eagle News</h3>
+                    <p>Your source for everything happening at Bethel International School.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -939,10 +884,10 @@ if(isset($_GET['msg'])) {
                 <div class="footer-column">
                     <h3>Categories</h3>
                     <ul>
-                        <li><a href="?category=Events">Events</a></li>
-                        <li><a href="?category=Announcements">Announcements</a></li>
-                        <li><a href="?category=Sports">Sports</a></li>
-                        <li><a href="?category=Clubs">Clubs</a></li>
+                        <li><a href="<?php echo ($currentCat == 'Events') ? 'index.php' : '?category=Events'; ?>">Events</a></li>
+                        <li><a href="<?php echo ($currentCat == 'Announcements') ? 'index.php' : '?category=Announcements'; ?>">Announcements</a></li>
+                        <li><a href="<?php echo ($currentCat == 'Sports') ? 'index.php' : '?category=Sports'; ?>">Sports</a></li>
+                        <li><a href="<?php echo ($currentCat == 'Clubs') ? 'index.php' : '?category=Clubs'; ?>">Clubs</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -955,25 +900,20 @@ if(isset($_GET['msg'])) {
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; <?php echo date('Y'); ?> Eagle School News. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> Bethel International School. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.getElementById('nav-menu').classList.toggle('show');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const navMenu = document.getElementById('nav-menu');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            if (!navMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
-                navMenu.classList.remove('show');
-            }
-        });
+        // Mobile menu toggle (no nav menu, but keep for potential future use)
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        if(mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                // No nav menu to toggle, but you could add functionality later
+                console.log('Mobile menu clicked - no navigation menu present');
+            });
+        }
 
         // Auto-hide messages after 5 seconds
         const messageElement = document.querySelector('.message');

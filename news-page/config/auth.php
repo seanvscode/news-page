@@ -1,6 +1,8 @@
 <?php
 // config/auth.php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 class Auth {
     private $conn;
@@ -9,7 +11,7 @@ class Auth {
         $this->conn = $db;
     }
     
-    // Login function
+    // Login function - using plain text comparison
     public function login($username, $password) {
         $query = "SELECT * FROM admin_users WHERE username = :username LIMIT 1";
         $stmt = $this->conn->prepare($query);
@@ -18,6 +20,7 @@ class Auth {
         
         if($stmt->rowCount() > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            // Plain text comparison (since password is stored as 'admin123')
             if($password == $row['password']) {
                 $_SESSION['admin_logged_in'] = true;
                 $_SESSION['admin_id'] = $row['id'];

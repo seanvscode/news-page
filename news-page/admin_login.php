@@ -15,18 +15,14 @@ if($auth->isLoggedIn()) {
 $error = '';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
-    $password = trim($_POST['password'] ?? '');
-    
-    // Debug - let's see what's happening
-    error_log("Login attempt - Username: " . $username);
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
     
     if($auth->login($username, $password)) {
         header('Location: index.php');
         exit();
     } else {
         $error = 'Invalid username or password!';
-        error_log("Login failed for user: " . $username);
     }
 }
 ?>
@@ -186,7 +182,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         <?php if($error): ?>
             <div class="error-message">
-                <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($error); ?>
+                <i class="fas fa-exclamation-circle"></i> <?php echo $error; ?>
             </div>
         <?php endif; ?>
         
